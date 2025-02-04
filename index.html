@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" class="css" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <title>CyberSecurity - ваша безопасность</title>
+  </head>
+  <body>
+    <header class="container header">
+      <nav class="header__nav">
+        <a class="header__logo" href="#" tabindex="1">
+          <img src="./assets/logo.svg" alt="Логотип" />
+        </a>
+        <div class="header__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="header__menu">
+          <ul class="header__list">
+            <li class="header__element">
+              <a class="header__link" href="#aboutc" tabindex="2">О нас</a>
+            </li>
+            <li class="header__element">
+              <a class="header__link" href="#products" tabindex="3"
+                >Продукты и услуги</a
+              >
+            </li>
+            <li class="header__element">
+              <a class="header__link" href="#career" tabindex="4">Карьера</a>
+            </li>
+          </ul>
+        </div>
+        <a class="header__link" href="#" tabindex="5" id="contactButton">
+          <button class="header__button button">Контакты</button>
+        </a>
+        <div class="header__mobile-menu container">
+          <p>Навигация</p>
+          <div class="decor-line"></div>
+          <ul class="header__mobile-list">
+            <li class="header__element">
+              <a class="header__link" href="#" tabindex="6">О нас</a>
+            </li>
+            <li class="header__element">
+              <a class="header__link" href="#" tabindex="7"
+                >Продукты и услуги</a
+              >
+            </li>
+            <li class="header__element">
+              <a class="header__link" href="#" tabindex="8">Карьера</a>
+            </li>
+          </ul>
+          <p>Контакты</p>
+          <div class="decor-line-red"></div>
+          <ul class="header__mobile-list">
+            <li class="header__element">
+              <address>Адрес: адрес</address>
+            </li>
+            <li class="header__element">
+              Номер:
+              <a href="tel:+7 888 888 89 29" class="main__info-contact-link"
+                >+7 888 888 89 29</a
+              >
+            </li>
+            <li class="header__element">
+              Почта:
+              <a
+                href="mailto:example@example.ru"
+                class="main__info-contact-link"
+                >contact@rapidauto.ru</a
+              >
+            </li>
+            <li class="header__element">Часы работы: Пн-Пт: 9:00 - 18:00</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="container main__section promo" id="aboutc">
+        <img class="promo__security__image" src="./assets/cybersecurity.svg" />
+        <div class="promo__about">
+          <h1 class="promo__header">
+            <span class="promo__company__info">Надёжные</span>
+            <span class="promo__company__info">Решения в сфере</span>
+            <span class="promo__company__info">Кибербезопасности</span>
+          </h1>
+          <div class="promo__description">
+            CyberSecurity Technologies: Ваш надежный партнер в мире
+            кибербезопасности
+          </div>
+          <div class="promo__description">
+            C нами вы можете быть уверены в надежной защите вашего бизнеса от
+            киберугроз. Свяжитесь c нами сегодня, чтобы узнать больше о наших
+            услугах и начать сотрудничество!
+          </div>
+          <div class="promo__buttons">
+            <a class="header__link" href="#products" tabindex="5">
+              <button class="promo__button button">Наши услуги</button>
+            </a>
+            <a class="header__link" href="#" tabindex="5">
+              <button class="promo__button button">Задать вопрос</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="container main__section about">
+        <div class="about__image-wrapper">
+          <img class="about__image" src="./assets/about.png" alt="" />
+        </div>
+        <div class="about__content" id="aboutContent"></div>
+      </section>
+      <section class="main__background__wrapper">
+        <section class="container main__section services" id="products">
+          <h2 class="services__header">Предоставляем услуги:</h2>
+          <div class="services__cards">
+            <div class="services__card card">
+              <div class="card__justify">
+                <h3 class="card__header">Аудит безопасности</h3>
+                <div class="card__rectangle"></div>
+              </div>
+              <div class="card__description">
+                Мы проводим комплексный анализ вашей IT-инфраструктуры, выявляя
+                уязвимости и потенциальные риски.
+              </div>
+            </div>
+            <div class="services__card card-black">
+              <div class="card__justify">
+                <h3 class="card__header">Шифрование данных</h3>
+                <div class="card__rectangle card__rectangle-white"></div>
+              </div>
+              <div class="card__description">
+                Мы применяем передовые методы шифрования для защиты
+                конфиденциальной информации.
+              </div>
+            </div>
+            <div class="services__card card-black">
+              <div class="card__justify">
+                <h3 class="card__header">Защита от DDoS-атак</h3>
+                <div class="card__rectangle card__rectangle-white"></div>
+              </div>
+              <div class="card__description">
+                Мы обеспечиваем надежную защиту ваших серверов и приложений от
+                распределенных атак.
+              </div>
+            </div>
+            <div class="services__card card">
+              <div class="card__justify">
+                <h3 class="card__header">Обучение персонала</h3>
+                <div class="card__rectangle"></div>
+              </div>
+              <div class="card__description">
+                Мы проводим обучающие семинары и тренинги по повышению
+                осведомленности сотрудников о кибербезопасности.
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="main__background__wrapper wrapper__grid">
+        <section class="main__section applications container">
+          <div class="applications__header">
+            <span class="applications__info">Мы работаем </span>
+            <span class="applications__info">над созданием </span>
+            <span class="applications__info-red">собственных </span>
+            <span class="applications__info">приложений</span>
+          </div>
+          <div class="applications__cards">
+            <div class="application__card"></div>
+            <div class="application__card"></div>
+            <div class="application__card"></div>
+            <div class="application__card"></div>
+          </div>
+        </section>
+      </section>
+      <section class="container main__section career" id="career">
+        <h2 class="career__header">Карьера</h2>
+        <div class="career__cards-block">
+          <div class="career__card">
+            <img
+              src="./assets/first.svg"
+              alt="FirstImage"
+              class="career__card-image"
+            />
+
+            <div class="career__card-info">
+              <p class="career__card-header">Frontend разработчик</p>
+              <p class="career__card-text">ЗП: от 55000</p>
+            </div>
+            <button class="career__card-button">
+              <svg
+                width="52"
+                height="52"
+                viewBox="0 0 52 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="50"
+                  height="50"
+                  rx="25"
+                  fill="black"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M39.1274 14.9995C39.1274 14.1711 38.4558 13.4995 37.6274 13.4995H24.1274C23.299 13.4995 22.6274 14.1711 22.6274 14.9995C22.6274 15.828 23.299 16.4995 24.1274 16.4995L36.1274 16.4995L36.1274 28.4995C36.1274 29.328 36.799 29.9995 37.6274 29.9995C38.4558 29.9995 39.1274 29.328 39.1274 28.4995V14.9995ZM16.0607 38.6876L38.6881 16.0602L36.5668 13.9389L13.9393 36.5663L16.0607 38.6876Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="career__card">
+            <img
+              src="./assets/second.svg"
+              alt="SecondImage"
+              class="career__card-image"
+            />
+            <div class="career__card-info">
+              <p class="career__card-header">HR менеджер</p>
+              <p class="career__card-text">ЗП: от 50000</p>
+            </div>
+            <button class="career__card-button">
+              <svg
+                width="52"
+                height="52"
+                viewBox="0 0 52 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="50"
+                  height="50"
+                  rx="25"
+                  fill="black"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M39.1274 14.9995C39.1274 14.1711 38.4558 13.4995 37.6274 13.4995H24.1274C23.299 13.4995 22.6274 14.1711 22.6274 14.9995C22.6274 15.828 23.299 16.4995 24.1274 16.4995L36.1274 16.4995L36.1274 28.4995C36.1274 29.328 36.799 29.9995 37.6274 29.9995C38.4558 29.9995 39.1274 29.328 39.1274 28.4995V14.9995ZM16.0607 38.6876L38.6881 16.0602L36.5668 13.9389L13.9393 36.5663L16.0607 38.6876Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="career__card">
+            <img
+              src="./assets/third.svg"
+              alt="ThirdImage"
+              class="career__card-image"
+            />
+            <div class="career__card-info">
+              <p class="career__card-header">Project менеджер</p>
+              <p class="career__card-text">ЗП: от 60000</p>
+            </div>
+            <button class="career__card-button">
+              <svg
+                width="52"
+                height="52"
+                viewBox="0 0 52 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="50"
+                  height="50"
+                  rx="25"
+                  fill="black"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M39.1274 14.9995C39.1274 14.1711 38.4558 13.4995 37.6274 13.4995H24.1274C23.299 13.4995 22.6274 14.1711 22.6274 14.9995C22.6274 15.828 23.299 16.4995 24.1274 16.4995L36.1274 16.4995L36.1274 28.4995C36.1274 29.328 36.799 29.9995 37.6274 29.9995C38.4558 29.9995 39.1274 29.328 39.1274 28.4995V14.9995ZM16.0607 38.6876L38.6881 16.0602L36.5668 13.9389L13.9393 36.5663L16.0607 38.6876Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content container">
+        <div class="footer__contacts">
+          <a href="tel:+7 888 888 89 29" class="main__info-contact-link"
+            >+7 888 888 89 29</a
+          >
+          <a href="mailto:contact@rapidauto.ru" class="main__info-contact-link"
+            >contact@rapidauto.ru</a
+          >
+          <address class="footer__company-adress">
+            <span>Балтийская ул., 88, г. Барнаул</span>
+          </address>
+          <div class="footer__contacts-socials">
+            <a href="https://vk.com/" class="footer__contacts-social">VK</a>
+            <a href="https://vk.com/" class="footer__contacts-social">TG</a>
+            <a href="https://vk.com/" class="footer__contacts-social">W</a>
+          </div>
+        </div>
+        <div class="footer__sitemap">
+          <h3 class="footer__sitemap-header">Карта сайта</h3>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-element"><a href="#aboutc">О нас</a></li>
+              <li class="footer__nav-element">
+                <a href="#products">Услуги</a>
+              </li>
+              <li class="footer__nav-element">
+                <a href="#career">Карьера</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <div class="modals-container"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>

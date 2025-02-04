@@ -1,0 +1,1037 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --red-color: #d7403d;
+  --orange-color: #ffb61d;
+}
+
+/* Обнуление стандартных стилей  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+/* Контейнер */
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  padding-inline: 50px;
+}
+
+/* Шапка */
+
+header {
+  padding-block: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.header__nav,
+.header__list {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  align-items: center;
+  gap: 24px;
+  display: flex;
+  flex-direction: row;
+}
+
+.header__nav {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header__link {
+  color: black;
+  font-size: 16px;
+}
+
+.header__button:hover {
+  border: 1px solid #d7403d;
+}
+
+.header__link:visited {
+  color: black;
+}
+
+.header__link:hover {
+  color: var(--red-color);
+}
+
+.header__logo {
+  z-index: 10;
+}
+
+.header__logo img {
+  pointer-events: none;
+}
+
+.button {
+  padding: 9px 28px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.header__mobile-menu.active {
+  transform: translateX(0);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.header__hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header__hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.header__hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.header__mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  transition: left 0.3s ease;
+  z-index: 9;
+  display: flex;
+  padding-top: 100px;
+}
+
+.header__mobile-menu {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.header__mobile-list .header__element .header__link {
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.decor-line {
+  height: 2px;
+  width: 100%;
+  background-color: #ffb61d;
+}
+
+.decor-line-red {
+  height: 2px;
+  width: 100%;
+  background-color: #d7403d;
+}
+
+.header__mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header__mobile-menu.active {
+  left: 0;
+}
+
+.header__mobile-list li {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.header__mobile-list li a,
+.header__mobile-list li a:visited {
+  color: #000;
+  font-weight: 500;
+}
+
+.header__mobile-list .header__element:last-child {
+  padding-bottom: 30px;
+}
+
+/* Раздел main */
+
+.main__section {
+  display: flex;
+}
+
+.promo {
+  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-block: 58px;
+}
+
+.promo__about {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  line-height: 1.2;
+}
+
+.promo__header span:first-child {
+  color: var(--red-color);
+}
+
+.promo__company__info {
+  font-family: "Montserrat Alternates", system-ui;
+  display: block;
+  font-weight: 600;
+  font-size: 64px;
+}
+
+.promo__description {
+  font-family: "Montserrat", sans-serif;
+  color: #4b4b4b;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.promo__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.promo__buttons a:first-child > button {
+  background-color: black;
+  color: white;
+}
+
+.promo__button {
+  font-family: "Montserrat", sans-serif;
+}
+
+.promo__button:hover {
+  border: 1px solid #d7403d;
+}
+
+.promo__buttons a:first-child > button:hover {
+  background-color: #d7403d;
+  border: 1px solid #d7403d;
+}
+
+.promo__security__image {
+  pointer-events: none;
+}
+
+/* секция about */
+
+.about {
+  padding-block: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.about img {
+  display: block;
+  width: 100%;
+  pointer-events: none;
+}
+
+.about__header {
+  text-align: center;
+  font-family: "Montserrat Alternates", system-ui;
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--red-color);
+  margin-bottom: 40px;
+}
+
+.about__info span {
+  color: var(--red-color);
+}
+
+.about__info {
+  margin-block: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #4b4b4b;
+}
+
+/* секция services */
+
+.main__background__wrapper {
+  background-color: white;
+}
+
+.services {
+  display: grid;
+  grid-template-rows: auto auto;
+  padding-bottom: 58px;
+}
+
+.services__header {
+  font-family: "Montserrat Alternates", system-ui;
+  display: block;
+  font-weight: 600;
+  font-size: 64px;
+  margin-block: 58px;
+}
+
+.services__cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  justify-content: center;
+}
+
+.services__card {
+  width: 100%;
+  border: 1px solid black;
+  height: 246px;
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__rectangle {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.card__rectangle-white {
+  background-color: white;
+}
+
+.card__justify {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card__header {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.card__description {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.card-black {
+  background-color: black;
+  color: white;
+}
+
+.card-black:hover {
+  background-color: #333;
+  border-color: #555;
+}
+
+.wrapper__grid {
+  height: 470px;
+  background-color: black;
+  background-image: url(./assets/grid.png);
+  background-size: cover;
+}
+
+/* секция applications */
+
+.applications {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 70px;
+  justify-content: center;
+}
+
+.applications__info {
+  font-family: "Montserrat Alternates", system-ui;
+  display: block;
+  font-weight: 600;
+  font-size: 64px;
+  color: white;
+}
+
+.applications__info-red {
+  font-family: "Montserrat Alternates", system-ui;
+  display: block;
+  font-weight: 600;
+  font-size: 64px;
+  color: var(--red-color);
+}
+
+.applications__cards {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  position: relative;
+}
+
+.application__card {
+  width: 302px;
+  height: 177px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+/* секция career */
+
+.career {
+  background-color: #f6f6f6;
+  padding-block: 61px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.career__header {
+  font-size: 64px;
+  font-family: "Montserrat Alternates", system-ui;
+  width: 100%;
+  text-align: right;
+  font-weight: 600;
+}
+
+.career__card {
+  padding: 16px;
+  padding-top: 32px;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-family: "Montserrat Alternates", system-ui;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.career__card-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.career__card-button {
+  align-self: flex-end;
+}
+
+.career__card-button {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.career__card-button:hover {
+  color: #d7403d;
+}
+
+.career__card-header {
+  font-weight: 500;
+}
+
+.career__card-header,
+.career__card-text {
+  font-size: 24px;
+  color: #fff;
+}
+
+.career__card-text {
+}
+
+.career__cards-block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.career__card:first-child {
+  border-top-left-radius: 100px;
+}
+.career__card:last-child {
+  border-top-right-radius: 100px;
+}
+
+/* Подвал */
+
+.footer {
+  background-color: #f6f6f6;
+  padding-block: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.footer__contacts {
+  font-family: "Montserrat", serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  font-weight: 600;
+  gap: 16px;
+}
+
+.footer__company-adress {
+  text-align: start;
+  padding: 0;
+  color: #393939;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.footer a:hover,
+.footer a:visited:hover {
+  transition: color 0.3s ease;
+  color: #d7403d;
+}
+
+.footer__contacts-social {
+  font-size: 16px;
+  border-radius: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  transition: border 0.3s ease;
+}
+
+.footer__contacts-social:hover {
+  border: 1px solid #d7403d;
+}
+
+.footer__sitemap {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: "Montserrat", serif;
+  gap: 40px;
+}
+
+.footer__sitemap-header {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 12px;
+  font-size: 20px;
+  color: #000;
+  font-weight: 400;
+}
+
+footer a,
+footer a:visited {
+  color: #393939;
+}
+
+/* Модальное окно */
+
+.modal {
+  font-family: "Montserrat", sans-serif;
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__content {
+  border-radius: 12px;
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  color: #000000;
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.modal__content h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal__content p {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.modal__close {
+  color: #888;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  transition: color 0.2s ease-in-out;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Медиа запросы */
+
+@media (min-width: 1466px) {
+  .container {
+    padding-inline: 0px;
+  }
+}
+
+@media (max-width: 1326px) {
+  .applications__info,
+  .applications__info-red {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .card__rectangle {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .card__header {
+    font-size: 28px;
+  }
+
+  .application__card {
+    width: 268px;
+    height: 157px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .promo__security__image {
+    display: none;
+  }
+  .promo {
+    grid-template-columns: auto;
+  }
+
+  .applications {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .applications__info,
+  .applications__info-red {
+    display: inline;
+  }
+
+  .applications__header {
+    text-align: center;
+  }
+
+  .wrapper__grid {
+    height: auto;
+    padding-block: 26px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .services__cards {
+    grid-template-columns: auto;
+  }
+
+  .container {
+    padding-inline: 20px;
+  }
+
+  .about {
+    padding-block: 40px;
+  }
+  .services__header {
+    margin-block: 40px;
+  }
+}
+
+@media (max-width: 860px) {
+  .promo__company__info {
+    font-size: 48px;
+  }
+
+  .applications__info,
+  .applications__info-red {
+    font-size: 36px;
+  }
+
+  .application__card {
+    width: 234px;
+    height: 137px;
+  }
+
+  .services__header {
+    font-size: 52px;
+  }
+
+  .container {
+    padding-inline: 10px;
+  }
+
+  .career__cards-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .career__card {
+    border-radius: 20px;
+    align-items: center;
+    width: 70%;
+  }
+
+  .career__card:last-child {
+    border-radius: 20px;
+    border-bottom-right-radius: 100px;
+  }
+
+  .footer__sitemap-header {
+    font-size: 24px;
+  }
+
+  .footer__contacts,
+  .footer__company-adress {
+    font-size: 20px;
+  }
+
+  .footer__contacts-social {
+    padding: 8px;
+  }
+
+  .footer__sitemap {
+    gap: 20px;
+  }
+
+  .career__card-button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .about__image-wrapper {
+    display: none;
+  }
+
+  .about {
+    padding-block: 0px 30px;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 630px) {
+  .header {
+    box-shadow: 0 2px 4px 0 rgba(22, 22, 39, 0.2);
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .header__link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 562px) {
+  .promo__company__info {
+    font-size: 36px;
+  }
+
+  .promo {
+    padding-block: 40px;
+  }
+
+  .promo__buttons {
+    gap: 24px;
+  }
+
+  .card__header {
+    font-size: 24px;
+  }
+
+  .card__description {
+    font-size: 18px;
+  }
+
+  .card__rectangle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+  }
+
+  .footer__sitemap,
+  .footer__nav-list {
+    align-items: start;
+    text-align: left;
+  }
+
+  .career {
+    padding-block: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .services__header {
+    font-size: 32px;
+  }
+  .applications__info,
+  .applications__info-red {
+    font-size: 26px;
+  }
+
+  .applications__cards {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .promo {
+    padding-bottom: 0px;
+  }
+
+  .application__card {
+    width: 300px;
+  }
+
+  .header__hamburger {
+    display: flex;
+  }
+
+  .header__nav {
+    /* gap: 200px; */
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .button {
+    padding: 8px 18px;
+  }
+
+  .about__header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+
+  .promo__button {
+    font-size: 16px;
+  }
+
+  .about__info {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 500px) {
+  .header__mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .promo__company__info {
+    font-size: 28px;
+  }
+
+  .promo__buttons a:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 384px) {
+  .header__link {
+    font-size: 16px;
+  }
+
+  .modal__content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .promo__company__info {
+    font-size: 24px;
+  }
+}
